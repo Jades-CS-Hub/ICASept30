@@ -11,15 +11,27 @@ public class ShiftArray {
 		// shift unchanged:
 		shift = shift % arr.length;
 
+		System.out.println("The shift amount you entered is: " + shift);
+
 		int[] newArray = new int[arr.length];
 
-		for(int i = 0; i < arr.length; i++){
-			int index = (i+shift) % arr.length;
-			newArray[index] = arr[i];
-		}
+		//System.out.println("The original array is: " + Arrays.toString(arr));
 
-		arr = newArray;
+		
+
+		for(int i = 0; i < arr.length; i++){
+			int index = (i + shift) % arr.length;
+			newArray[index] = arr[i];
+		
+			//System.out.println("The new array is: " + newArray);
+		}
+		
+
+		for (int i = 0; i < arr.length; i++) {
+            arr[i] = newArray[i];}
+		
 	}
+
 
 
 	public static void main(String[] args) {
